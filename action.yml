@@ -1,6 +1,6 @@
-name: "GitHub Classroom IO Grader"
-author: "GitHub"
-description: "A plugin for GitHub Classroom's Autograder to ensure student executables output the correct values on tests."
+name: "GitHub Classroom IO Grader For Cachelab"
+author: "kooWZ& GitHub"
+description: "A modified plugin for GitHub Classroom's Autograder to support cachelab."
 inputs:
   test-name:
     description: "The unique identifier for the test."
