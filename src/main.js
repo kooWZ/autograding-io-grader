@@ -109,6 +109,13 @@ function run() {
       status = 'error'
       message = error
       score = 0
+    } else if (inputs.comparisonMethod=="cachelab") {
+      let scores = output.split('_').map(Number);
+      score = scores[parseInt(inputs.expectedOutput)];
+      if (score < inputs.maxScore){
+        status = 'fail'
+        message = `You didn't get full score. Your score: ${score}/${inputs.maxScore}`
+      }
     } else if (!compareOutput(output, inputs.expectedOutput, inputs.comparisonMethod)) {
       status = 'fail'
       message = `Output does not match expected: ${inputs.expectedOutput} Got: ${output}`
