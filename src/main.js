@@ -28,7 +28,7 @@ function getInputs() {
 
   const maxScore = parseInt(core.getInput('max-score') || 0)
 
-  if (!['exact', 'contains', 'regex'].includes(comparisonMethod)) {
+  if (!['exact', 'contains', 'regex', 'cachelab'].includes(comparisonMethod)) {
     throw new Error(`Invalid comparison method: ${comparisonMethod}`)
   }
 
